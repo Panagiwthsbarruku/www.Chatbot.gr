@@ -126,3 +126,18 @@ document.addEventListener("DOMContentLoaded", function() {
     message.appendChild(options);
   });
 }
+  function showHelpLinks() {
+        var input = document.getElementById('user-input').value.toLowerCase();
+        var optionsContainer = document.getElementById('options-container');
+
+        if (input.includes('βοήθεια')) {
+            optionsContainer.innerHTML = `
+                <a href="https://www.pacer.org/bullying/">Σχετική σελίδα για το Bullying</a><br>
+                <a href="https://www.stopbullying.gov/">Σχετική σελίδα για το Stop Bullying</a><br>
+                <a href="https://cyberbullying.org/">Σχετική σελίδα για το Cyberbullying</a><br>
+                <a href="https://www.cyberbullying.org.gr/">Εθνικός Οργανισμός κατά του Cyberbullying</a><br>
+            `;
+        } else {
+            optionsContainer.innerHTML = '';
+        }
+    }

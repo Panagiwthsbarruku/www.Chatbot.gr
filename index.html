@@ -6,32 +6,34 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <title>Chat Bot</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
 </head>
 <body>
 <div id="welcome-message">
-                <h2 class="h-5">Καλώς ήρθατε στο Chat Bot!</h2>
-                <p class="h-6">Κάντε κλικ στο κουμπί παρακάτω για να ενεργοποιήσετε το chat bot.</p>
-                <button id="activate-bot" onclick="activateChatBot()">Ενεργοποίηση Chat Bot</button>
-              </div>
-          <div class="container">
-            <div class="chat-box" id="chat-box">
-              <div class="chat-message bot-message">
-                <p>Γεια σου! Πώς μπορώ να σε βοηθήσω σήμερα;</p>
-                <div class="message-options">
-                    <a href="#" class="option hidden" title="Read Aloud"><i class="fas fa-volume-up"></i></a>
-                    <a href="#" class="option hidden" title="Copy"><i class="far fa-copy"></i></a>
-                    <a href="#" class="option hidden" title="Regenerate"><i class="fas fa-sync-alt"></i></a>
-                    <a href="#" class="option hidden" title="Bad Response"><i class="far fa-thumbs-down"></i></a>
-                  </div>
-              </div>
-              <!-- Προσθέτουμε τον εναλλακτικό κώδικα HTML για τα εικονίδια επιλογών -->
+    <h2 class="h-5">Καλώς ήρθατε στο Chat Bot!</h2>
+    <p class="h-6">Κάντε κλικ στο κουμπί παρακάτω για να ενεργοποιήσετε το chat bot.</p>
+    <button id="activate-bot" onclick="activateChatBot()">Ενεργοποίηση Chat Bot</button>
+</div>
+<div class="container">
+    <div class="chat-box" id="chat-box">
+        <div class="chat-message bot-message">
+            <p>Γεια σου! Πώς μπορώ να σε βοηθήσω σήμερα;</p>
+            <div class="message-options" id="options-container">
+                <!-- Εδώ θα εμφανίζονται οι σύνδεσμοι μόνο όταν ο χρήστης ζητήσει βοήθεια -->
             </div>
-            <img id="logo" src="png.logo.bot.png" alt="Το λογότυπό μας">
-          </div>
-          <div class="input-container">
-            <input type="text" id="user-input" placeholder="Πληκτρολογήστε το μήνυμά σας...">
-    <button onclick="sendMessage()" class="fa-solid fa-arrow-up"></button>
+        </div>
+        <!-- Προσθέτουμε τον εναλλακτικό κώδικα HTML για τα εικονίδια επιλογών -->
     </div>
+    <img id="logo" src="png.logo.bot.png" alt="Το λογότυπό μας">
+</div>
+<div class="input-container">
+    <input type="text" id="user-input" placeholder="Πληκτρολογήστε το μήνυμά σας...">
+    <button onclick="showHelpLinks()" class="fa-solid fa-arrow-up">Αποστολή</button>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

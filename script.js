@@ -36,7 +36,7 @@ var qaPairs = [
     {question:"Τι είναι το bullying;" , answer:"Το bullying είναι η επίμονη, επανειλημμένη και επιθετική συμπεριφορά που επηρεάζει αρνητικά ένα άτομο."},
     {question:"Πώς μπορώ να αντιμετωπίσω το bullying;" , answer:"Ορισμένοι τρόποι για να αντιμετωπίσετε το bullying είναι να μιλήσετε με έναν ενήλικα που μπορεί να βοηθήσει και να αναφέρετε το περιστατικό."},
 ]
- function sendMessage(){
+function sendMessage(){
       var userInput = document.getElementById("user-input").value;
       var chatBox = document.getElementById("chat-box");
       var chatMessage = document.createElement("div");
